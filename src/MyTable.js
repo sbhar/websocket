@@ -7,7 +7,7 @@ const MyTable = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const ws = new WebSocket('wss://websocket.b4a.app:8080');
+    const ws = new WebSocket('ws://localhost:8082');
 
     ws.onmessage = (event) => {
       const newData = JSON.parse(event.data);
